@@ -1,0 +1,49 @@
+package reactanglecalculatorapp;
+
+/**
+ *
+ * @author Prerna
+ */
+import java.util.Scanner;
+public class ReactangleCalculatorApp {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        System.out.println("Welcome to the Area and Perimeter Calculator");
+        System.out.println(); //print a blank line
+        
+        Scanner sc = new Scanner(System.in);
+        //perform calculations until choice isn't equal to "y" or "Y"
+        String choice = "y";
+        while (choice.equalsIgnoreCase("y")){
+            //get the rectangle length from the user
+            System.out.print("Enter length:  ");
+            double length = sc.nextDouble();
+            
+            //get the rectangle width from the user
+            System.out.print("Enter Width:  ");
+            double width = sc.nextDouble();
+            
+            //calculate the area and perimeter of the rectangle
+            double area = width * length;
+            double perimeter = 2 * width + 2 * length;
+            
+            //display the results
+            String message = "Area:  " + area + "\n"
+                           + "Perimeter:  " + perimeter + "\n";
+            
+            System.out.println(message);
+            
+            //see if the user wants to continue
+            System.out.print("Continue?  (y/n):  ");
+            choice = sc.next();
+            System.out.println(); //print a blank line
+            System.out.println("Press any key to continue . . .");
+            
+                    
+        }
+    }
+    
+}
